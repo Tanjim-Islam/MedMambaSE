@@ -12,6 +12,9 @@ The architecture of MedMambaSE includes:
 - **Path Merging:** Gradually reduces spatial dimensions while increasing feature channels, enabling efficient feature extraction.
 - **Classifier:** Final layer that outputs class predictions based on processed features.
 
+![MedMambaSE Architecture](https://github.com/Tanjim-Islam/MedMambaSE/blob/7b450c975e07a454322167b9d3cdc93e77609980/images/architecture.png)
+
+
 MedMambaSE is optimized for medical image classification tasks, offering enhanced accuracy and robustness, making it a reliable tool for clinical applications.
 
 ## How to use
