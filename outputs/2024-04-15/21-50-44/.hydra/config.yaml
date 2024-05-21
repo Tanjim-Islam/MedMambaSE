@@ -1,0 +1,16 @@
+model:
+  model_name: MedMamba
+  ckpt_path: E:/Studies/Thesis/Mamba/Windows/MedMamba/models
+  history_path: E:/Studies/Thesis/Mamba/Windows/MedMamba/evaluation
+  train_data_path: E:/Studies/Thesis/Mamba/Windows/MedMamba/data/train/
+  val_data_path: E:/Studies/Thesis/Mamba/Windows/MedMamba/data/val/
+  test_data_path: E:/Studies/Thesis/Mamba/Windows/MedMamba/data/test/
+  image_size: 128
+  classes: 6
+train:
+  batch_size: 32
+  epochs: 100
+  loss: categorical_crossentropy
+  optimizer: adam
+  metrics:
+  - accuracy
