@@ -39,3 +39,21 @@ pip install -r requirements.txt
 - timm==0.9.16
 - tqdm==4.65.0
 - CUDA == 11.2 (For Windows specifically)
+
+### Feature Recalibration with SE Blocks
+
+One of the standout features of MedMambaSE is its use of Squeeze-and-Excitation (SE) blocks to achieve feature recalibration. This process involves dynamically adjusting the importance of different feature maps, enabling the model to focus on the most relevant aspects of the input data. 
+
+#### How SE Blocks Work
+
+1. **Squeeze:** The spatial dimensions of the input feature maps are reduced using global average pooling, resulting in a vector of size equal to the number of channels.
+2. **Excitation:** This vector is passed through two fully connected (FC) layers with a ReLU activation and a sigmoid activation, producing a set of channel-wise weights.
+3. **Recalibration:** These weights are then used to scale the original feature maps, emphasizing important features and suppressing less useful ones.
+
+By integrating SE blocks, MedMambaSE can effectively recalibrate its features, enhancing its ability to detect abnormalities in medical ultrasound images. This feature recalibration improves the sensitivity and specificity of the model, leading to better performance in medical image classification tasks.
+
+The image below illustrates the effect of SE blocks on the feature maps:
+
+![Feature Recalibration](https://github.com/Tanjim-Islam/MedMambaSE/blob/7b450c975e07a454322167b9d3cdc93e77609980/images/recalibration.png)
+
+On the left, we see the feature maps before applying the SE block, and on the right, the feature maps after applying the SE block. Notice how the SE block enhances important features, making the model more effective in its analysis.
