@@ -54,6 +54,6 @@ By integrating SE blocks, MedMambaSE can effectively recalibrate its features, e
 
 The image below illustrates the effect of SE blocks on the feature maps:
 
-![Feature Recalibration](https://github.com/Tanjim-Islam/MedMambaSE/blob/7b450c975e07a454322167b9d3cdc93e77609980/images/recalibration.png)
+![Feature Recalibration](https://github.com/Tanjim-Islam/MedMambaSE/blob/999f652ef899ef1b2f5d7f221a36438834c82aa2/images/recalibration.png)
 
 On the left, we see the feature maps before applying the SE block, and on the right, the feature maps after applying the SE block. Notice how the SE block enhances important features, making the model more effective in its analysis.
