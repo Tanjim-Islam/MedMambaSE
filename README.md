@@ -58,4 +58,3 @@ The image below illustrates the effect of SE blocks on the feature maps:
 
 On the left, we see the feature maps before applying the SE block, and on the right, the feature maps after applying the SE block. Notice how the SE block enhances important features, making the model more effective in its analysis.
 
-### Context Awareness of SS-Conv-SSM Blocks
