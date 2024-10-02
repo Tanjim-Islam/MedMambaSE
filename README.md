@@ -58,4 +58,38 @@ The image below illustrates the effect of SE blocks on the feature maps:
 
 On the left, we see the feature maps before applying the SE block, and on the right, the feature maps after applying the SE block. Notice how the SE block enhances important features, making the model more effective in its analysis.
 
-### Context Awareness of SS-Conv-SSM Blocks
+### Training and Evaluation
+
+For our proposed model (MedMambaSE), we have employed the Adam optimizer with a learning rate of 0.001, weight decay of 1e-4, $\beta_1 = 0.9$, and $\beta_2 = 0.999$. We used Cross Entropy Loss to optimize the model parameters and trained the dataset for 20 epochs with a batch size of 16. Due to resource limitations, we did not use data augmentation techniques or pre-trained weights to assess the model's original performance. The training was conducted on a system with Windows 11 and an NVIDIA GeForce RTX 4090 GPU.
+
+### Summary of Experimental Setup for MedMambaSE
+
+| **Experimental Setup**     | **Details**                                   |
+| -------------------------- | --------------------------------------------- |
+| Operating System            | Windows 11                                    |
+| GPU Accelerators            | NVIDIA GeForce RTX 4090                       |
+| CPU                         | 13th Gen Intel(R) Core(TM) i9-13900K          |
+| DL Framework                | PyTorch                                       |
+| Optimizer                   | Adam (learning rate = 0.001, weight decay = 1e-4, $\beta_1 = 0.9$, $\beta_2 = 0.999$) |
+| Loss Function               | Cross Entropy Loss                            |
+| Epochs                      | 20                                            |
+| Batch Size                  | 16                                            |
+| Image Size                  | 128                                           |
+| Additional Techniques       | No data augmentation                          |
+|                             | No pre-trained weights used                   |
+
+### Model Performance
+
+MedMambaSE was trained for 20 epochs with early stopping. Initially, the training accuracy was 55.39% and validation accuracy was 51.37%. By the final epoch, training accuracy improved to 90.6% and validation accuracy reached 87.21%. Training loss decreased consistently, indicating effective optimization, but performance remained below 90%, likely due to the limited number of epochs.
+
+![MedMambaSE Performance](https://github.com/Tanjim-Islam/MedMambaSE/blob/999f652ef899ef1b2f5d7f221a36438834c82aa2/images/medSE.png)
+
+### Accuracy Comparison
+
+We compared MedMambaSE's performance with other models, as shown in the table below:
+
+| **Model**        | **Training Accuracy (%)** | **Test Accuracy (%)** | **Validation Accuracy (%)** |
+| ---------------- | ------------------------- | ---------------------- | --------------------------- |
+| Swin Transformer | 88.61                      | 73.95                  | 75.5                         |
+| MedMamba         | 87.56                      | 81.2                   | 83.49                        |
+| **MedMambaSE**   | **90.6**                   | **84.23**              | **87.21**                    |
