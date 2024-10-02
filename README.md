@@ -82,7 +82,7 @@ For our proposed model (MedMambaSE), we have employed the Adam optimizer with a 
 
 MedMambaSE was trained for 20 epochs with early stopping. Initially, the training accuracy was 55.39% and validation accuracy was 51.37%. By the final epoch, training accuracy improved to 90.6% and validation accuracy reached 87.21%. Training loss decreased consistently, indicating effective optimization, but performance remained below 90%, likely due to the limited number of epochs.
 
-![MedMambaSE Performance](https://github.com/Tanjim-Islam/MedMambaSE/blob/999f652ef899ef1b2f5d7f221a36438834c82aa2/images/medSE.png)
+![MedMambaSE Performance](https://github.com/Tanjim-Islam/MedMambaSE/blob/master/images/medSE.png)
 
 ### Accuracy Comparison
 
